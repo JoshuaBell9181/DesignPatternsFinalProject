@@ -1,0 +1,14 @@
+package sweProject;
+
+public class TextDocument implements Document{
+
+	String fileName;
+	
+	@Override
+	public void createDocumentFactoryMethod() {
+		
+		
+		
+	}
+	
+}

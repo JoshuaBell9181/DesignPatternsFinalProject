@@ -1,0 +1,17 @@
+package sweProject;
+
+public class Document {
+	private String Path;
+	
+	String getAbsolutePath(){
+		return Path;
+	}
+	
+	void setPath(String path) {
+		Path = path;
+	}
+	
+	void open() {
+		
+	}
+}

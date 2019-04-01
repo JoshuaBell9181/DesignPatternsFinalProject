@@ -1,0 +1,9 @@
+package sweProject;
+
+public interface Document {
+
+	public void createDocumentFactoryMethod();
+		
+	
+	
+}

@@ -1,0 +1,10 @@
+package sweProject;
+
+public interface Document {
+
+	String fileName;
+	
+	public void createDocumentFactoryMethod();
+		
+	
+}

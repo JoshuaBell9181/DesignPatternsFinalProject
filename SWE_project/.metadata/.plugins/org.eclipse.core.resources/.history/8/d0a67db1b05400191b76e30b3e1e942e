@@ -1,0 +1,8 @@
+package sweProject;
+
+public class DocumentFactory {
+	
+	public Document getDocument(String type){
+		
+	}
+}

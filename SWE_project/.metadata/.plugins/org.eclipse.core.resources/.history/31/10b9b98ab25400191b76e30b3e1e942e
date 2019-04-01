@@ -1,0 +1,12 @@
+package sweProject;
+
+public class DocumentFactory {
+	
+	public Document getDocument(String type){
+		if(type.equalsIgnoreCase("text")) {
+			return new TextDocument();
+		} else {
+			return null;
+		}
+	}
+}

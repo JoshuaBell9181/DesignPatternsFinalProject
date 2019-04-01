@@ -1,0 +1,102 @@
+package sweProject;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JMenu;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JEditorPane;
+import java.awt.BorderLayout;
+import javax.swing.JToolBar;
+import javax.swing.JButton;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+
+public class MainApp {
+
+	private JFrame frame;
+	private String currentFile = "";
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MainApp window = new MainApp();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public MainApp() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		
+		JMenuBar menuBar = new JMenuBar();
+		frame.setJMenuBar(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("File");
+		menuBar.add(mnNewMenu);
+		
+		JMenu mnNewMenu_1 = new JMenu("New...");
+		mnNewMenu.add(mnNewMenu_1);
+		
+		JMenuItem mntmText = new JMenuItem("Text Document");
+		mntmText.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String fileName = JOptionPane.showInputDialog(frame, "Please enter file name:", null);
+				UI ui = new UI();
+				ui.newDocument("text", fileName);
+				currentFile = fileName;
+				JLabel label = new JLabel(currentFile);
+				panel_1.add(label);
+				
+			}
+		});
+		mnNewMenu_1.add(mntmText);
+		
+		JMenuItem mntmOpen = new JMenuItem("Open");
+		mnNewMenu.add(mntmOpen);
+		
+		JPanel panel = new JPanel();
+		frame.getContentPane().add(panel, BorderLayout.WEST);
+		
+		JPanel panel_1 = new JPanel();
+		frame.getContentPane().add(panel_1, BorderLayout.NORTH);
+		
+		JLabel label = new JLabel("");
+		panel_1.add(label);
+		
+		
+		JPanel panel_2 = new JPanel();
+		frame.getContentPane().add(panel_2, BorderLayout.EAST);
+		
+		JPanel panel_3 = new JPanel();
+		frame.getContentPane().add(panel_3, BorderLayout.SOUTH);
+		
+		JEditorPane editorPane = new JEditorPane();
+		frame.getContentPane().add(editorPane, BorderLayout.CENTER);
+		
+		//frame.pack();
+		//frame.setSize(507, 323);
+	}
+}

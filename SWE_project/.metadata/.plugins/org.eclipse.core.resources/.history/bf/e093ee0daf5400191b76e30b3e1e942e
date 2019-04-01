@@ -1,0 +1,11 @@
+package sweProject;
+
+public class TextDocument implements Document{
+
+	@Override
+	public void createDocumentFactoryMethod() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
