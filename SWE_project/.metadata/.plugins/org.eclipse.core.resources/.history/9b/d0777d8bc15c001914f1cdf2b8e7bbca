@@ -1,0 +1,21 @@
+package sweProject;
+
+import javax.swing.JOptionPane;
+
+public class RealImage implements Image{
+	   private String fileName;
+
+	   public RealImage(String fileName){
+	      this.fileName = fileName;
+	      loadFromDisk(fileName);
+	   }
+
+	   @Override
+	   public void display() {
+		   JOptionPane.showInputDialog("Displaying " + fileName , null);
+	   }
+
+	   private void loadFromDisk(String fileName){
+		   JOptionPane.showInputDialog("Displaying " + fileName , null);
+	   }
+}

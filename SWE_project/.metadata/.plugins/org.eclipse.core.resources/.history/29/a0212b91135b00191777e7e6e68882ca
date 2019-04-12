@@ -1,0 +1,16 @@
+package sweProject;
+
+public class Subscriber extends User{
+
+	String name;
+	String email;
+	boolean subscriber;
+	
+	@Override
+	public User buildPart(String name, String email, boolean subscriber) {
+		
+		return null;
+	}
+
+	
+}

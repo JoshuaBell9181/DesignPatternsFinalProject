@@ -1,0 +1,14 @@
+package sweProject.Prototype;
+
+public abstract class Prototype {
+
+	String greeting = "Hello world";
+	
+	public abstract Prototype clone();
+	
+	String getGreeting(){
+		return greeting;
+	}
+	
+	
+}

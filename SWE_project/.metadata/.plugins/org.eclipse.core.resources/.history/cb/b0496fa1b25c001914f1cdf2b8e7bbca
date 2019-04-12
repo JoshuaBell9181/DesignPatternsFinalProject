@@ -1,0 +1,35 @@
+package sweProject;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import sweProject.builder.User;
+
+public class ChatRoom {
+
+	private JPanel contentPane;
+	ArrayList<User> users = new ArrayList<User>();
+
+
+	/**
+	 * Create the frame.
+	 */
+	public ChatRoom(ArrayList<User> users) {
+		JFrame frame = new JFrame();
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame.setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		frame.setContentPane(contentPane);
+		frame.setVisible(true);
+	}
+	
+	
+
+}

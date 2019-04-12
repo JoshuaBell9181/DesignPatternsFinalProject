@@ -1,0 +1,8 @@
+package sweProject;
+
+public interface Builder {
+
+	User buildPart(boolean subscriber);
+
+	
+}

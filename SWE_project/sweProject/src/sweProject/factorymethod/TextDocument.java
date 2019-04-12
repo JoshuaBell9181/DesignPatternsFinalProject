@@ -1,0 +1,26 @@
+package sweProject.factorymethod;
+
+import java.io.File;
+import java.io.IOException;
+
+public class TextDocument implements DocumentCreator{
+
+	
+	@Override
+	public void createDocumentFactoryMethod(String fileName) {
+		
+		File file = new File("./" + fileName + ".txt");
+		
+		try {
+			if(file.createNewFile()){
+				System.out.println("File: " + fileName + " was created.");
+			} else {
+				System.out.println("File already exists.");
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+}

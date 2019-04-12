@@ -1,0 +1,9 @@
+package sweProject.FactoryMethod;
+
+public interface DocumentCreator {
+
+	
+	public void createDocumentFactoryMethod(String fileName);
+		
+	
+}

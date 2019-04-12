@@ -1,0 +1,7 @@
+package sweProject;
+
+public interface Builder {
+
+	User buildPart(String name, String email);
+
+}

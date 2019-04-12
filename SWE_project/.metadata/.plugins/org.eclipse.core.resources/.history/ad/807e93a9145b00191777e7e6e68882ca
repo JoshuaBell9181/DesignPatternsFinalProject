@@ -1,0 +1,11 @@
+package sweProject;
+
+public class NonSubscriber extends User{
+
+	@Override
+	public User buildPart() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
