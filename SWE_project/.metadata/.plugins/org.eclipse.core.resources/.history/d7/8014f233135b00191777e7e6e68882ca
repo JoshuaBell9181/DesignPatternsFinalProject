@@ -1,0 +1,6 @@
+package sweProject;
+
+public interface Builder {
+
+	User buildPart();
+}

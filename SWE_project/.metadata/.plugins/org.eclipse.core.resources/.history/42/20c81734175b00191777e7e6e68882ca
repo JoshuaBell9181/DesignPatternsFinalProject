@@ -1,0 +1,26 @@
+package sweProject;
+
+public class Subscriber extends User{
+
+
+	String name;
+	String email;
+	boolean subscriber;
+	
+	Subscriber(String name, String email) {
+		super(name, email);
+		this.name = name;
+		this.email = email;
+	}
+
+	@Override
+	public User buildPart(boolean subscriber) {
+		this.subscriber = subscriber;
+		this.name = super.name;
+		this.email = super.email;
+		return this;
+	}
+
+
+	
+}

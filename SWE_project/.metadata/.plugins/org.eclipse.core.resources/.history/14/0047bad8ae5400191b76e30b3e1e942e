@@ -1,7 +1,0 @@
-package sweProject;
-
-public abstract class Document {
-
-	abstract public void createDocumentFactoryMethod();
-		
-}

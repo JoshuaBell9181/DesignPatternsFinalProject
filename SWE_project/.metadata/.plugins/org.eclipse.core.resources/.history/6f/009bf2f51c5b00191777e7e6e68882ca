@@ -1,0 +1,37 @@
+package sweProject;
+
+
+import javax.swing.JOptionPane;
+
+import sweProject.FactoryMethod.DocumentFactory;
+import sweProject.Prototype.GreetingOnePrototype;
+import sweProject.Prototype.GreetingTwoPrototype;
+import sweProject.Prototype.Prototype;
+import sweProject.command.Command;
+
+public class UI {
+
+	
+	public void newDocument(String type, String fileName) {
+		DocumentFactory documentFactory = new DocumentFactory();
+		documentFactory.createDocument(type, fileName);
+	};
+	
+	public void openDocument(Document document) {
+		Command command = new OpenDocumentCommand(document);
+		command.execute();
+	}
+	
+	public String greeting(boolean showPrototypeOne) {
+		
+		if(showPrototypeOne) {
+			GreetingOnePrototype prototype = new GreetingOnePrototype();
+			Prototype test = prototype.clone();
+			return test.getGreeting();
+		} else {
+			GreetingTwoPrototype prototype = new GreetingTwoPrototype();
+			Prototype test = prototype.clone();
+			return test.getGreeting();
+		}
+	}
+}

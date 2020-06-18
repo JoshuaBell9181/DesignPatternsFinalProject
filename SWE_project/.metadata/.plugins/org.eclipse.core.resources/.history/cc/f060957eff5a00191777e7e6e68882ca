@@ -1,0 +1,8 @@
+package sweProject;
+
+public interface Determine {
+
+	String determineFormat();
+	
+	
+}

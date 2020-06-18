@@ -1,0 +1,17 @@
+package sweProject;
+
+public abstract class User implements Builder{
+
+	String name;
+	String email;
+	boolean subscriber;
+	
+	User(String name, String emai){
+		this.name = name;
+		this.email = email;
+	}
+	
+	@Override
+	abstract public User buildPart(String name, String email);
+
+}

@@ -1,0 +1,8 @@
+package sweProject;
+
+public abstract class User implements Builder{
+
+	@Override
+	abstract public User buildPart();
+
+}

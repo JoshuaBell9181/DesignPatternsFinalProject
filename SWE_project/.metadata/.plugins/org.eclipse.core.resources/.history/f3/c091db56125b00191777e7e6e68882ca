@@ -1,0 +1,11 @@
+package sweProject;
+
+public class User implements Builder{
+
+	@Override
+	public User buildPart() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

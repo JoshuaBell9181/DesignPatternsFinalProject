@@ -1,0 +1,18 @@
+package sweProject.Facade;
+
+import sweProject.Converter;
+
+public class Facade {
+
+	private SaveAccordingly  saveAccordingly = new SaveAccordingly();
+	private Converter converter = new Converter();
+	
+	void autoSave(String fileName, String content){
+		saveAccordingly.autoSave(fileName, content);
+	}
+	
+	void export(String fileName) {
+		converter.convert(fileName);
+	}
+	
+}

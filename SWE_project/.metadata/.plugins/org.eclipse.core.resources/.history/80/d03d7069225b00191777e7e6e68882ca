@@ -1,0 +1,20 @@
+package sweProject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CareTaker {
+	   private List<Memento> mementoList = new ArrayList<Memento>();
+
+	   public void add(Memento state){
+	      mementoList.add(state);
+	   }
+	   
+	   public int getLength() {
+		   return mementoList.size();
+	   }
+
+	   public Memento get(int index){
+	      return mementoList.get(index);
+	   }
+}

@@ -1,0 +1,12 @@
+package sweProject;
+
+public class DetermineText implements Determine{
+
+	@Override
+	public String determineFormat(String content) {
+		
+		return null;
+	}
+
+	
+}

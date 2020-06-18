@@ -1,7 +1,0 @@
-package sweProject;
-
-public interface Command {
-
-	public void Execute(String fileName);
-	
-}
